@@ -21,7 +21,6 @@ def signup(request):
 
     return render(request, 'users/signup.html', {'form': form})
 
-"""" 
 def getSteamProfile(id):
     rep = requests.get(f'https://steamcommunity.com/profiles/{id}/')
     content = rep.text[280:350]
@@ -32,7 +31,7 @@ def getSteamProfile(id):
         temp += char
         i +=1
     return str(temp[:-1])
-    """
+
 
 
 

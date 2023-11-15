@@ -1,5 +1,7 @@
 from django.db import models
 from django.contrib.auth.models import AbstractBaseUser, BaseUserManager
+import requests
+from .online_information import getSteamProfile
 
 class AccountManager(BaseUserManager):
     def create_user(self, email, username, password=None, **extra_fields):
@@ -33,4 +35,4 @@ class Account(AbstractBaseUser):
     REQUIRED_FIELDS = ['username']
 
     def __str__(self):
-        return f' User Number : {self.id} // User Name : {self.username} //  SteamId : {self.steamId}'
+        return f' User Number : {self.id} // User Name : {self.username} //  SteamId : {self.steamId} - {getSteamProfile(self.steamId)}'
