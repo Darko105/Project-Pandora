@@ -19,6 +19,8 @@ from django.urls import path,include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('index/',include("pandora.urls")),
-    path('user/',include('usersauth.urls')),
+    path('',include("pandora.urls")),
+    path('user/',include('users.urls')),
+    path('user/',include('django.contrib.auth.urls')),
+    
 ]

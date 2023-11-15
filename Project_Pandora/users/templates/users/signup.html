@@ -1,0 +1,13 @@
+{% extends 'pandora/mainLayout.html' %}
+
+{% block content %}
+  <h2>Sign Up</h2>
+  <form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Sign Up</button>
+    {% for message in massages %}
+        <p>{{ message }}</p>
+    {% endfor %}
+  </form>
+{% endblock %}
