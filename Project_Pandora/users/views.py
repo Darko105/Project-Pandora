@@ -3,6 +3,7 @@ from django.http import HttpResponseRedirect
 from django.contrib.auth import login,authenticate
 from django.contrib import messages
 from .forms import SignUpForm,LoginForm
+import requests
 
 siteName = 'Pandora'
 
@@ -19,6 +20,19 @@ def signup(request):
         form = SignUpForm()
 
     return render(request, 'users/signup.html', {'form': form})
+
+"""" 
+def getSteamProfile(id):
+    rep = requests.get(f'https://steamcommunity.com/profiles/{id}/')
+    content = rep.text[280:350]
+    char = temp = ''
+    i = 0
+    while char != '<':
+        char = content[i]
+        temp += char
+        i +=1
+    return str(temp[:-1])
+    """
 
 
 
