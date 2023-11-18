@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<!-- {% load bootstrap4 %}
+{% bootstrap_css %} -->
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'styles/main.css' %}">
+
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,500;1,600&display=swap" rel="stylesheet">
+
+    <title>{% block title %}{% endblock %}</title>
+</head>
+<body>
+    <div class="container">
+    {% include 'navbar.html' %}
+
+    <div class="server-main-section">
+        <div class="server-card">
+            <img src="{% static 'images/main-cover.jpg' %}" alt="">
+            <div class="server-text">
+                <h3>Welcome To <span>Pandora!</span></h3>
+                <button class="join-button">Join Now!</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- <div class="bundle-container">
+        <div class="bundle-card">
+            <img src="{% static 'images/bundle1.jpeg' %}" alt="">
+            <div class="bundle-content">
+                <h3>bundle 1</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo architecto qqsdfqsdfqdf!</p>
+                <a href="" class="bundle-btn">22$</a>
+            
+            </div>
+        </div>
+
+            <div class="bundle-card">
+                <img src="{% static 'images/bundle2.jpeg' %}" alt="">
+                <div class="bundle-content">
+                    <h3>bundle 2</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo architecto qqsdfqsdfqdf!</p>
+                    <a href="" class="bundle-btn">22$</a>
+                
+                </div>
+            </div>
+
+            <div class="bundle-card">
+                <img src="{% static 'images/bundle3.jpeg' %}" alt="">
+                <div class="bundle-content">
+                    <h3>bundle 3</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo architecto qqsdfqsdfqdf!</p>
+                    <a href="" class="bundle-btn">22$</a>
+                
+                </div>
+            </div> -->
+
+        
+    </div>
+    {% block content %}
+    {% endblock %}
+</div>
+<!-- js links -->
+
+    <script type="text/javascript" src="{% static 'js/main.js' %}"></script>
+
+<!-- Add these lines to include Bootstrap JS -->
+<!-- {% bootstrap_javascript %} -->
+    
+</body>
+</html>
