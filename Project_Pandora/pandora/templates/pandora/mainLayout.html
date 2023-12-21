@@ -1,16 +1,38 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/mainLayout.css' %}">
     <title>{% block title %}{% endblock %}</title>
 </head>
 <body>
     <!--main body layout-->
-    
-
     <div class="container">
+        <nav class="top-navigation-bar">
+            <div class="nav-container">
+                <div class="logo">
+                    <a href="">Logo Here</a>
+                </div>
+                <div class="nav-section-container">
+                    <ul>
+                        <li><a href="">Home</a></li>
+                        <li><a href="">Blog</a></li>
+                        <li><a href="">Bundels</a></li>
+                        <li><a href="">More</a></li>
+                    </ul>
+                </div>
+                <input type="text" class="search">
+                <a href="">Join!</a>
+            </div>
+        </nav>
+
+
+
+
+
         {% block content%}
         {% endblock %} 
     </div>
